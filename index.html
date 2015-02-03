@@ -1,0 +1,33 @@
+ <html>
+     <head>
+     <style type="text/css">
+             html, body { margin:0; height:100%; overflow:hidden; }
+             body { margin:0; height:100%; width:100%;}
+         </style>
+     </head>
+ <body>
+     <!--
+     Debug Console: 
+     <a href="javascript:void(0);" onclick="ytplayer.playVideo()">Play</a> 
+     <a href="javascript:void(0);" onclick="ytplayer.pauseVideo()">Pause</a>
+     <a href="javascript:void(0);" onclick="ytplayer.nextVideo()">Next</a>
+     <a href="javascript:void(0);" onclick="decreaseVol()">-</a>
+     <a href="javascript:void(0);" onclick="increaseVol()">+</a>
+     -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>    
+  <div id="ytapiplayer">
+    You need Flash player 8+ and JavaScript enabled to view this video.
+  </div>
+     
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="adhd.js"></script> 
+
+     <!--
+     //works:
+     <a href="javascript:ytplayer.loadVideoById({videoId:'lDl0NRpoddI', suggestedQuality:'highres'})">Load</a>
+     <a href="javascript:ytplayer.loadVideoByUrl({mediaContentUrl:'https://www.youtube.com/watch?v=lDl0NRpoddI', suggestedQuality:'highres'})">Load2</a>
+     <a href="javascript:ytplayer.playVideo()">Play</a>
+     <a href="javascript:void(0);" onclick="play();">Play</a>
+    -->
+  </body>
+  </html>
