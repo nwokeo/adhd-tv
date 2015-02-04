@@ -11,39 +11,39 @@ function onYouTubePlayerReady(playerId) {
         */
         
         /* bands */
-        'Z9IODJdi3GA',
-        'qrYoA0yBPok',
-        'gEI-NNoKvH4',
-        'nO2BM7nVD6k',
-        'cAvMIX4Hlic',
+        'Z9IODJdi3GA', //ok--
+        'qrYoA0yBPok', //ok
+        'gEI-NNoKvH4', //ok
+        'nO2BM7nVD6k', //ok
+        'cAvMIX4Hlic', //ok
         
         /* hip hop */
-        'xN6izmEZ9v0',
+        'xN6izmEZ9v0', //ok
         
         /* interludes */
-        'sQZrxNaqCUU',
-        'FqmUXNWW7R8',
-        'xDuyz9qrhUk',
+        'sQZrxNaqCUU', //ok
+        'FqmUXNWW7R8', //ok
+        'xDuyz9qrhUk', //ok
         
         /* electronic */
-        'PWi54vhGlQY',
-        'ymyeFxfro9s',
-        'oZjMPONVO50',
-        '8md9mUs8Uls',
-        'kV4Gk4I-VX8',
-        'Qi11LVYL8g4',
-        'u46eaeAfeqw',
-        'BVOBQyhAtEc'
+        'PWi54vhGlQY', //ok--
+        'ymyeFxfro9s', //ok
+        'oZjMPONVO50', //ok
+        '8md9mUs8Uls', //skipped
+        'kV4Gk4I-VX8', //skipped
+        'Qi11LVYL8g4', //not in rotation
+        'u46eaeAfeqw', //ok
+        'BVOBQyhAtEc' //not in rotation
     ];
     
     pl_test = ['YYBcQgLMjK8']
     
     //start playing on load
-    ytplayer.loadPlaylist({playlist:pl_test, suggestedQuality:'highres'});
+    ytplayer.loadPlaylist({playlist:pl, suggestedQuality:'highres'});
     
     //options
     ytplayer.setLoop(true);
-    ytplayer.setShuffle(true);
+    ytplayer.setShuffle(true); //use a random seed too?
     
     //debug
     ytplayer.addEventListener("onStateChange", "debugInfo");
@@ -53,20 +53,12 @@ function onYouTubePlayerReady(playerId) {
     //ytplayer.playVideo()
 }
 
-/*
-function play() {
-  if (ytplayer) {
-    ytplayer.playVideo();
-  }
-}
-*/
 var params = { 
         allowScriptAccess: "always",
         allowFullscreen: "true"
     },
     atts = { 
         id: "myytplayer" 
-        
     },
     vol = 100,
     s = '',
@@ -94,6 +86,7 @@ var params = {
  swfobject.embedSWF("http://www.youtube.com/apiplayer?enablejsapi=1&version=3", //https://developers.google.com/youtube/player_parameters
                      "ytapiplayer", "100%", "100%", "8", null, null, params, atts);
 
+/* DEBUG */
 $(document).keypress(function(event){
     s = String.fromCharCode(event.which);
     if (s==='d'){
